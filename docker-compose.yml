@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  workspace:
+    image: gcr.io/icentris-ml-prd/workspace:latest
+    container_name: workspace
+    volumes:
+      - ./test.py:/workspace/test.py
+    environment:
+        - ENV=tst
+    tty: true
