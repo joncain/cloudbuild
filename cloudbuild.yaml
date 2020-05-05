@@ -1,3 +1,5 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/icentris-ml-local-jcain/test-image', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['run', 'gcr.io/icentris-ml-local-jcain/test-image']
